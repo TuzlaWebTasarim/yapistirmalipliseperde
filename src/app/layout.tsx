@@ -24,17 +24,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'tr_TR',
     url: 'https://yapistirmalipliseperde.com.tr',
-    siteName: 'Fenetre Systems – Yapıştırmalı Plise Perde',
-    title: 'Yapıştırmalı Plise Perde | Fenetre Systems',
+    siteName: 'Yapıştırmalı Plise Perde',
+    title: 'Yapıştırmalı Plise Perde ile Hemen Dekorasyon',
     description:
-      'Delmeden monte edilen yapıştırmalı plise perde sistemleri. Özel ölçü üretim, Türkiye geneli montajlı teslim, Avrupa\'ya 4-10 günde kapıya teslim.',
+      'Yapıştırmalı plise perde seçenekleriyle evinizi dakikalar içinde yenileyin. Delmeden montaj, özel ölçü üretim, renk ve kumaş çeşitleriyle şıklık bir tık uzağınızda.',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@FenetreSystems',
-    creator: '@FenetreSystems',
-    title: 'Yapıştırmalı Plise Perde | Fenetre Systems',
-    description: 'Delmeden monte edilen plise perde sistemleri. Özel ölçü, Avrupa teslimat.',
+    title: 'Yapıştırmalı Plise Perde ile Hemen Dekorasyon',
+    description: 'Yapıştırmalı plise perde seçenekleriyle evinizi dakikalar içinde yenileyin.',
   },
   alternates: {
     canonical: 'https://yapistirmalipliseperde.com.tr',
