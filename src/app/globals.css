@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green: #83bd81;
+  --green-dark: #6aa868;
+  --green-light: #f0f8ef;
+  --dark: #404e5e;
+  --dark-light: #5a6878;
+  --cream: #fafdf9;
+  --slate: #f4f7f4;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Plise fold decoration */
+.plise-fold {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 18px,
+    rgba(131, 189, 129, 0.12) 18px,
+    rgba(131, 189, 129, 0.12) 20px
+  );
+}
+
+.plise-fold-dark {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 18px,
+    rgba(64, 78, 94, 0.08) 18px,
+    rgba(64, 78, 94, 0.08) 20px
+  );
+}
+
+/* Section spacing */
+.section-pad {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Accordion svg plise pattern */
+.accordion-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0 L20 20 L40 0' stroke='%2383bd81' stroke-width='0.5' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 40px 20px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--slate); }
+::-webkit-scrollbar-thumb { background: var(--green); border-radius: 3px; }
+
+/* Table styles */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.styled-table th {
+  background: var(--dark);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.styled-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #e8f0e8;
+  color: var(--dark);
+}
+.styled-table tr:nth-child(even) td { background: var(--slate); }
+.styled-table tr:hover td { background: var(--green-light); }
+
+/* Fade animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.65s ease forwards; }
+
+/* Mobile bottom bar offset */
+.pb-mobile { padding-bottom: 72px; }
+@media (min-width: 768px) { .pb-mobile { padding-bottom: 0; } }
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tag badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--green-light);
+  color: var(--green-dark);
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(64, 78, 94, 0.12);
+}
+
+/* Divider */
+.divider-green {
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--green-dark));
+  border-radius: 2px;
+  margin: 0.75rem 0 1.5rem 0;
+}
